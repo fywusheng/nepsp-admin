@@ -1,0 +1,78 @@
+// 头部搜索模块
+.header-filter {
+  display: flex;
+  padding: 16px 16px 16px 16px;
+  margin-bottom: 16px;
+  align-items: center;
+  background: white;
+  border-bottom:1px solid $fourth_border_color;
+  .el-form-item--mini.el-form-item,
+  .el-form-item--small.el-form-item {
+    margin-bottom: 0;
+  }
+  .el-form-item {
+    margin-left: 10px;
+    margin-bottom: 0;
+    ::v-deep .el-form-item__content {
+      margin-left: 0 !important;
+    }
+    .el-button:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .select-input {
+    width: 180px;
+    margin-top: 20px;
+  }
+}
+
+.content-container {
+  padding: 16px;
+  background: #fff;
+}
+
+//   表格操作按钮模块
+.table-oper {
+  display: flex;
+  margin-bottom: 16px;
+  position: relative;
+  .export {
+    float: right;
+    font-size: 14px;
+    color: #1677ff;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+.table-oper-right {
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  .el-link {
+    margin-right: 16px;
+  }
+}
+.el-pagination {
+  margin-top: 16px;
+}
+
+//弹窗底部按钮
+.footer-button {
+  display: flex;
+  justify-content: flex-end;
+  width: 100% !important;
+  .el-button:nth-child(1) {
+    color: #ffffff;
+  }
+}
+//   分页
+.el-pagination {
+  margin-top: 16px;
+}

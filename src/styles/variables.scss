@@ -1,0 +1,342 @@
+/*******layout-start********/
+/*
+ * 01 布局变量
+ * 内容：sidebar、header、版心、navbar、footer
+ */
+// sidebar样式变量
+$menu_text:#333;//菜单模块的字颜色
+$menu_active_text:#FF5500;//2菜单选中的字颜色
+
+$menu_bg:#fff;//sidebar菜单所有tab的默认展示背景色
+$menu_hover:#FFFAF7;//sidebar鼠标tab的hover颜色和tab选中active颜色
+$menu_active:#FFFAF7;//选中的右边边框
+
+$sub_menu_bg:#fff;//sidebar整个区块的背景色
+$sub_menu_hover:#FFFAF7;//sidebar二级tab的hover颜色
+$sub_menu_active_text:#333; //多级下拉，子集被选中，父级的显示字颜色
+
+$footer_bg_color:#fff;//底部背景颜色
+//logo文字大小
+$logo_ft_large: 20px;//logo文字大
+$logo_ft_small: 14px;//logo文字小
+// 布局宽度
+$lay_width_1100: 1100px; // 中间版心宽度
+$side_bar_width: 210px; // sidebar的宽度
+//布局配置样式设置
+$navbar_height: 50px;//头部navbar区块高度,版式一
+$header_height: 70px;//头部headerbox区块高度，版式2
+$footer_height: 50px;//底部的高度
+//版式1和2的公共样式
+$sidebar_item_fir_height: 40px; //sidebar1级的tab高度
+$sidebar_item_sec_height: 40px; //sidebar2级的tab高度
+/*******layout-end********/
+
+
+/*******theme-start********/
+/*
+ * 02 标准色
+ * 规则：${深浅}_{颜色}_{分类}_color_{序号} 变量统一采用下划线命名规范
+ * 分类：可为空
+ *   main：主色
+ *   font：字体色
+ *   line：线色
+ *   gradient: 渐变 (gradient1、gradient2)
+ *   second：辅色
+ *   third：次级辅色
+ * 颜色：不为空，常用颜色英文
+ * 深浅：可为空 或者 不透明的
+ *   darker：较深
+ *   dark：深
+ *   light：浅
+ *   lighter：较浅
+ */
+// 主色
+$main_color: #e7562c; // 品牌蓝
+$blue_color: #3ca0f6; // 常规蓝 链接色
+$light_blue_color: #e8eff8; // 浅蓝
+
+//渐变色
+$gradient_blue_color_1: #3ca0f6; // 渐变蓝 - 1
+$gradient_blue_color_2: #3b71e8;; // 渐变蓝 - 2
+
+// 场景 辅色
+$success_color: #67c23a; // 常规绿 成功色
+$light_success_color: #eff8eb; // 浅绿 用于成功等正确性提示配色（次要）
+
+$warn_color: #e6a23a; // 常规橙 警告色
+$light_warn_color: #fcf5eb; // 浅橙 用于文字背景色（次要）
+
+$danger_color: #f56c6c; // 常规红 危险色
+$light_danger_color: #fef0f0; // 浅红 用于警告或者错误提示（次要）
+
+// 文本 颜色
+$main_text_color: #303133; // 用于标题、正文等
+$second_text_color: #606266; // 次级文本
+$third_text_color: #909399; // 辅助文本
+$fourth_text_color: #c0c4cc; // 禁用文本 / 字体图标颜色
+
+//边框 颜色 pc 与 移动端 有区别, 请留意
+$border_color: #b6b7b9;
+$second_border_color: #cecece; //用于默认边框颜色、分割线等
+$third_border_color: #ebeef5;  //用于标题下划线等
+$fourth_border_color: #f2f6f7;  //用于辅助边框等
+
+//背景色 pc 与 移动端 有区别, 请留意
+$main_bg_color:#f5f7fa;  //用于默认背景色、下拉鼠标悬停背景、禁用状态背景等
+$second_bg_color:#f0f2f5; //用于辅助背景色等
+
+// 标签
+$main_color_15: rgba(27, 101, 185, .15); // 15%品牌蓝 标签背景
+$main_color_30: rgba(27, 101, 185, .3); // 30%品牌蓝 标签描边
+$success_color_15: rgba(103, 194, 58, .15); // 15%品牌绿 标签背景
+$success_color_30: rgba(103, 194, 58, .3); // 30%品牌绿 标签背景
+$danger_color_15: rgba(245, 108, 108, .15); // 标签背景
+$danger_color_30: rgba(245, 108, 108, .3); // 标签描边
+$warn_color_15: rgba(230, 162, 60, .15); // 标签背景
+$warn_color_30: rgba(230, 162, 60, .3); // 标签描边
+$third_text_color_15: rgba(144, 147, 153, .15); // 标签背景
+$third_text_color_30: rgba(144, 147, 153, .3);// 标签描边
+
+// 表格
+$second_border_color-table: rgba(206, 206, 206, .3); //表格横线
+
+// 投影
+$shadow_1: 0px 2px 4px 0px rgba(0, 0, 0, .2);
+$shadow_2: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+
+// 遮罩
+$mask_black: rgba(0, 0, 0, .2); //弹窗背景遮罩颜色-黑色
+$mask_white: rgba(255, 255, 255, .7); //弹窗背景遮罩颜色-白色
+
+//其他
+$white_color:#ffffff;
+/*******theme-end********/
+
+
+/*******space-start********/
+/*
+ * 03 间距
+ * 规则：$space_{间距} 变量统一采用下划线命名规范
+ */
+ $space_4: 4px;
+ $space_6: 6px;
+ $space_8: 8px;
+ $space_10: 10px;
+ $space_12: 12px;
+ $space_16: 16px;
+ $space_20: 20px;
+ $space_24: 24px;
+ $space_32: 32px;
+ $space_40: 40px;
+ $space_48: 48px;
+/*******space-end********/
+
+// base color
+$blue:#324157;
+$light-blue:#3A71A8;
+$red:#C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+
+$color-secondary: rgb(6, 254, 213);
+$color-white: #fff;
+$color-dark-white: rgb(251, 254, 254);
+$color-black: #000;
+
+$color-base-black: rgb(31, 61, 59);
+$color-light-black: rgb(50, 87, 87);
+$color-extra-light-black: rgb(72, 106, 105);
+
+$color-base-silver: #006d75;
+$color-light-silver: #13c2c2;
+$color-extra-light-silver: #36cfc9;
+
+$color-base-gray: rgb(209, 229, 228);
+$color-light-gray: rgb(228, 240, 241);
+$color-extra-light-gray: rgb(238, 246, 246);
+// sidebar
+$menuText:#f0f3f7;
+$menuActiveText:#409EFF;
+$subMenuActiveText:#f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:#304156;
+$menuHover:#263445;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+
+$sideBarWidth: 135px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
+
+
+//Transition
+$all-transition: all .3s cubic-bezier(.645,.045,.355,1);
+$fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
+$fade-linear-transition: opacity 200ms linear;
+$md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+$border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1);
+$color-transition-base: color .2s cubic-bezier(.645,.045,.355,1);
+
+// Border
+
+$border-width-base: 1px;
+$border-style-base: solid;
+$border-color-base: rgb(191, 217, 215);
+$border-color-hover: rgb(131, 165, 164);
+$border-base: 1px solid rgb(191, 217, 215);
+$border-radius-base: 4px;
+$border-radius-small: 2px;
+$border-radius-circle: 100%;
+
+// Box-shadow
+
+$box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
+
+// Fill
+
+$fill-base: #fff;
+
+/**
+* I think element-ui's default theme color is too light for long-term use.
+* So I modified the default color and you can modify it to your liking.
+**/
+
+/* theme color */
+$--color-primary: #1890ff;
+$--color-success: #13ce66;
+$--color-warning: #FFBA00;
+$--color-danger: #ff4949;
+// $--color-info: #1E1E1E;
+
+$--button-font-weight: 200;
+
+// $--color-text-regular: #1f2d3d;
+
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+
+$--table-border:1px solid#dfe6ec;
+
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  // sidebar样式变量
+  menu_text: $menu_text;
+  menu_active_text: $menu_active_text;
+  menu_bg: $menu_bg;
+  menu_hover: $menu_hover;
+  menu_active: $menu_active;
+  sub_menu_active_text: $sub_menu_active_text;
+  sub_menu_bg: $sub_menu_bg;
+  sub_menu_hover: $sub_menu_hover;
+
+  //logo文字
+  logo_ft_large: $logo_ft_large;//logo文字大
+  logo_ft_small: $logo_ft_small;//logo文字小
+
+  //主题颜色
+  main_color: $main_color ;
+  blue_color:$blue_color;
+  light_blue_color: $light_blue_color;
+
+  // 渐变
+  gradient_blue_color_1:$gradient_blue_color_1;
+  gradient_blue_color_2:$gradient_blue_color_2;
+
+  // 场景
+  success_color:$success_color;
+  light_success_color: $light_success_color;
+
+  warn_color:$warn_color;
+  light_warn_color: $light_warn_color;
+
+  danger_color:$danger_color;
+  light_danger_color: $light_danger_color;
+
+  // 文本
+  main_text_color: $main_text_color;
+  second_text_color: $second_text_color;
+  third_text_color: $third_text_color;
+  fourth_text_color: $fourth_text_color;
+
+  //边框
+  border_color: $border_color;
+  second_border_color: $second_border_color;
+  third_border_color: $third_border_color;
+  fourth_border_color: $fourth_border_color;
+  
+  //背景色
+  main_bg_color: $main_bg_color;
+  second_bg_color: $second_bg_color;
+
+  // 标签
+  main_color_15: $main_color_15;
+  main_color_30: $main_color_30;
+  success_color_15: $success_color_15;
+  success_color_30: $success_color_30;
+  danger_color_15: $danger_color_15;
+  danger_color_30: $danger_color_30;
+  warn_color_15: $warn_color_15;
+  warn_color_30: $warn_color_30;
+  third_text_color_15: $third_text_color_15;
+  third_text_color_30: $third_text_color_30;
+
+  // 表格
+  second_border_color-table: $second_border_color-table;
+
+  // 投影
+  shadow_1: $shadow_1;
+  shadow_2: $shadow_2;
+
+  // 遮罩
+  mask_black: $mask_black;
+  mask_white: $mask_white;
+
+  //间距
+  space_4: $space_4;
+  space_6: $space_6;
+  space_8: $space_8;
+  space_10: $space_10;
+  space_12: $space_12;
+  space_16: $space_16;
+  space_20: $space_20;
+  space_24: $space_24;
+  space_32: $space_32;
+  space_40: $space_40;
+  space_48: $space_48;
+
+  // 布局宽度
+  lay_width_1100: $lay_width_1100;
+  side_bar_width: $side_bar_width;
+
+
+  // 布局配置样式设置
+  navbar_height: $navbar_height;
+  header_height: $header_height;
+  footer_height: $footer_height;
+  footer_bg_color:$footer_bg_color;
+  
+  // 版式1和2的公共样式
+  sidebar_item_fir_height: $sidebar_item_fir_height;
+  sidebar_item_sec_height: $sidebar_item_sec_height;
+  
+  // 其他
+  color-white:$white_color;
+}
